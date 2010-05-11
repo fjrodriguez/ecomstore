@@ -43,7 +43,7 @@ MEDIA_ROOT = ''
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/static'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -59,6 +59,15 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.load_template_source',
 #     'django.template.loaders.eggs.load_template_source',
 )
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'ecomstore.utils.context_processors.ecomstore',
+)
+
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -82,6 +91,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'ecomstore.catalog',
+    'ecomstore.utils',
     'django.contrib.admin',
     #'djangodblog',
 )
+
+SITE_NAME = 'Modern Musician'
+META_KEYWORDS = 'Music, instruments, music accesories, musician supplies'
+META_DESCRIPTION = 'Modern Musician is an online supplier of instruments, \
+        sheet music, and other accesories for musicians'
