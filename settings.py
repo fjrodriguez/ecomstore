@@ -93,6 +93,7 @@ INSTALLED_APPS = (
     'ecomstore.catalog',
     'ecomstore.utils',
     'django.contrib.admin',
+    'ecomstore.cart',
     #'djangodblog',
 )
 
