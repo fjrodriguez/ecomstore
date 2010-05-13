@@ -16,5 +16,6 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     (r'^', include('catalog.urls')),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root':'/Users/fjrodriguez/Documents/source/ecomstore/static'}),
+        {'document_root':'/home/fjrodriguez/Documentos/source/ecomstore/static'}),
+    (r'^cart/', include('cart.urls')),
 )

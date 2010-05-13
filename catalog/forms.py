@@ -28,4 +28,5 @@ class ProductAddToCartForm(forms.Form):
             if not self.request.session.test_cookie_worked():
                 raise forms.ValidationError("Cookies must be enabled.")
         return self.cleaned_data
+
 # vim: set ai ts=4 et sw=4 sts=4: 
